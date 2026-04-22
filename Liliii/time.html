@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Time ⏳</title>
+
+<!-- FONTS -->
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Quicksand&display=swap" rel="stylesheet">
+
+<style>
+body {
+    font-family: 'Quicksand', sans-serif;
+    text-align: center;
+    margin: 0;
+    background: #ffe6f0;
+}
+
+/* NAVBAR */
+.navbar {
+    background: #ff4d88;
+    padding: 30px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* NAVBAR LINKS */
+.navbar a {
+    font-family: 'Dancing Script', cursive;
+    font-size: 24px;
+    color: white;
+    margin: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s ease;
+    display: inline-block;
+}
+
+/* HOVER GLOW */
+.navbar a:hover {
+    text-shadow: 0 0 10px #ffffff,
+                 0 0 20px #ff99cc,
+                 0 0 30px #ff4d88;
+    transform: scale(1.1);
+}
+
+/* CARD */
+.card {
+    background: white;
+    max-width: 650px;
+    margin: 60px auto;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* TITLE */
+h1 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 45px;
+    color: #ff4d88;
+}
+
+/* TIMER TEXT */
+#timer {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 22px;
+    color: #555;
+    margin-top: 20px;
+}
+
+/* SIDE IMAGES */
+.side{
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.left{
+    left: 20px;
+}
+
+.right{
+    right: 20px;
+}
+
+.side img{
+    width: 180px;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease;
+}
+
+.side img:hover{
+    transform: scale(1.1);
+}
+
+/* MOBILE */
+@media (max-width: 768px){
+    .side{
+        display: none;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<div class="navbar">
+    <a href="index.html">Home</a>
+    <a href="story.html">Story</a>
+    <a href="memories.html">Memories</a>
+    <a href="time.html">Time</a>
+</div>
+
+<!-- LEFT IMAGE -->
+<div class="side left">
+    <img src="minilili.jpeg">
+</div>
+
+<!-- RIGHT IMAGE -->
+<div class="side right">
+    <img src="minitato.jpeg">
+</div>
+
+<!-- CARD -->
+<div class="card">
+    <h1>Time Together ⏳</h1>
+    <h2 id="timer"></h2>
+</div>
+
+<script>
+const startDate = new Date("2025-08-22");
+
+function updateTime() {
+    const now = new Date();
+    let diff = now - startDate;
+
+    let seconds = Math.floor(diff / 1000);
+    let minutes = Math.floor(seconds / 60);
+    let hours = Math.floor(minutes / 60);
+    let days = Math.floor(hours / 24);
+
+    hours = hours % 24;
+    minutes = minutes % 60;
+    seconds = seconds % 60;
+
+    document.getElementById("timer").innerHTML =
+        days + " days " +
+        hours + " hours " +
+        minutes + " minutes " +
+        seconds + " seconds ❤️";
+}
+
+setInterval(updateTime, 1000);
+updateTime();
+</script>
+
+</body>
+</html>
