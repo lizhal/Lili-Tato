@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Tato & Lili ❤️</title>
+
+<!-- FONTS -->
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Quicksand&display=swap" rel="stylesheet">
+
+<style>
+body {
+    margin: 0;
+    font-family: 'Quicksand', sans-serif;
+    background: linear-gradient(to bottom, #ffe6f0, #fff);
+    text-align: center;
+    position: relative;
+}
+
+/* NAVBAR */
+.navbar {
+    background: #ff4d88;
+    padding: 30px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar a {
+    font-family: 'Dancing Script', cursive;
+    font-size: 24px;
+    color: white;
+    margin: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s ease;
+    display: inline-block;
+}
+
+/* HOVER GLOW */
+.navbar a:hover {
+    text-shadow: 0 0 10px #fff,
+                 0 0 20px #ff99cc,
+                 0 0 30px #ff4d88;
+    transform: scale(1.1);
+}
+
+/* HOME */
+.home {
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* TITLE */
+h1 {
+    font-family: 'Dancing Script', cursive;
+    color: #ff4d88;
+    font-size: 50px;
+    margin-bottom: 10px;
+}
+
+/* MAIN PHOTO */
+.photo-container {
+    margin-top: 20px;
+}
+
+.main-photo {
+    width: 280px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+/* FLOATING PHOTOS */
+.heart {
+    position: absolute;
+    width: 150px;
+    height: 250px;
+    border-radius: 10px;
+    border: 3px solid black;
+    object-fit: cover;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease;
+}
+
+/* HOVER ON PHOTOS */
+.heart:hover{
+    transform: scale(1.1) rotate(0deg);
+}
+
+
+/* POSITIONS (CLOSER TO CENTER) */ 
+    .h1 { top: 85px; left: 200px; transform: rotate(-5deg); } 
+    .h2 { top: 85px; right: 200px; transform: rotate(5deg); } 
+    .h3 { bottom: 80px; left: 200px; transform: rotate(4deg); }
+    .h4 { bottom: 80px; right: 200px; transform: rotate(-4deg); }
+    .h5 { top: 500px; left: 120px; transform: rotate(-6deg); } 
+    .h6 { top: 500px; right: 120px; transform: rotate(6deg); }
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<div class="navbar">
+    <a href="index.html">Home</a>
+    <a href="story.html">Story</a>
+    <a href="memories.html">Memories</a>
+    <a href="time.html">Time</a>
+</div>
+
+<!-- HOME -->
+<div class="home">
+    <h1>Welcome to Tato & Lili 💕</h1>
+
+    <div class="photo-container">
+        <img src="19.jpeg" class="main-photo">
+    </div>
+</div>
+
+<!-- FLOATING PHOTOS -->
+<img src="59.jpeg" class="heart h1">
+<img src="three.jpeg" class="heart h2">
+<img src="26.jpeg" class="heart h3">
+<img src="six.jpeg" class="heart h4">
+<img src="37.jpeg" class="heart h5">
+<img src="40.jpeg" class="heart h6">
+
+</body>
+</html>
